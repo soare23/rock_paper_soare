@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Javascript Game</title>
+    <meta charset="UTF-8" />
+    <!-- http://proger.i-forge.net/The_smallest_transparent_pixel/ -->
+    <link
+      rel="icon"
+      href="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA="
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>Rock Paper Scissors</header>
+    <div class="container">
+      <div>
+        <div class="scoreboard">
+          <span class="user">USER</span>
+          <div style="justify-content: space-between;">
+            <span id="user-score"> 0 </span> :
+            <span id="computer-score"> 0 </span>
+          </div>
+          <span class="computer">COMP</span>
+        </div>
+        <div
+          style="display: flex; align-items: center; justify-content: center;"
+        >
+          <div class="chosen_option" id="user">
+            <img id="user_image" src="images/rock_choice.png" alt="rock" />
+          </div>
+          <span class="versus">VS</span>
+          <div class="chosen_option" id="computer">
+            <img id="comp_image" src="images/rock_choice.png" alt="rock" />
+          </div>
+        </div>
+        <div class="game_options">
+          <div class="choices" id="rock_choice">
+            <img src="images/rock_choice.png" alt="rock" />
+          </div>
+          <div class="choices" id="paper_choice">
+            <img src="images/paper_choice.png" alt="paper" />
+          </div>
+          <div class="choices" id="scissors_choice">
+            <img src="images/scissors_choice.png" alt="scissors" />
+          </div>
+        </div>
+        <div class="message">BEGIN</div>
+      </div>
+    </div>
+    <script src="game.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  </body>
+</html>

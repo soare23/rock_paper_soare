@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Press Start 2P", cursive;
+  font-weight: lighter;
+  background-color: #191923;
+  text-align: center;
+  color: #fff;
+  font-size: 0.7em;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+header {
+  background-color: #bf1363;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  height: fit-content;
+  font-size: 2.5em;
+  border: solid #fff;
+  padding: 20px;
+}
+
+.game_options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choices img {
+  height: 100px;
+  width: 100px;
+  margin-top: 30px;
+}
+
+.scoreboard {
+  height: 50px;
+  text-align: center;
+  font-size: 4.5em;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.choices:hover {
+  cursor: pointer;
+  border: 5px solid #f39237;
+}
+
+.choices {
+  background: #fff;
+  border-radius: 70%;
+  margin: 15px;
+}
+
+.active {
+  border: solid #f39237;
+}
+
+.clear {
+  border: none;
+}
+
+.chosen_option img {
+  height: 200px;
+  width: 200px;
+  margin-top: 30px;
+}
+
+.chosen_option {
+  display: inline;
+  margin: 20px;
+}
+
+.versus {
+  font-size: 6em;
+  margin-top: 100px;
+}
+
+.user {
+  margin-right: 25px;
+  color: #f39237;
+}
+
+.computer {
+  margin-left: 20px;
+  color: #0e79b2;
+}
+
+.message {
+  border: solid 5px #fff;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  margin-top: 50px;
+  font-size: 4em;
+}

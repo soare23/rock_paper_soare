@@ -41,39 +41,32 @@ function playerChoiceFunction() {
 // Compare choices
 
 function compareChoices() {
-  if (playerChoiceID === "rock_choice" && comp === "scissors_choice") {
-    message.innerHTML = "You win!";
-    user_count += 1;
-    user_score.innerHTML = user_count;
-  } else if (playerChoiceID === "rock_choice" && comp === "paper_choice") {
-    message.innerHTML = "You lose!";
-    comp_count += 1;
-    comp_score.innerHTML = comp_count;
-  } else if (playerChoiceID === "rock_choice" && comp === "rock_choice") {
-    message.innerHTML = "Its a draw!";
-  }
-  if (playerChoiceID === "paper_choice" && comp === "scissors_choice") {
-    message.innerHTML = "You lose!";
-    comp_count += 1;
-    comp_score.innerHTML = comp_count;
-  } else if (playerChoiceID === "paper_choice" && comp === "paper_choice") {
-    message.innerHTML = "Its a draw!";
-  } else if (playerChoiceID === "paper_choice" && comp === "rock_choice") {
-    message.innerHTML = "You win!";
-    user_count += 1;
-    user_score.innerHTML = user_count;
-  }
-  if (playerChoiceID === "scissors_choice" && comp === "scissors_choice") {
-    message.innerHTML = "Its a draw!";
-  } else if (playerChoiceID === "scissors_choice" && comp === "paper_choice") {
-    message.innerHTML = "You win!";
-    user_count += 1;
-    user_score.innerHTML = user_count;
-  } else if (playerChoiceID === "scissors_choice" && comp === "rock_choice") {
-    message.innerHTML = "You lose!";
-    comp_count += 1;
-    comp_score.innerHTML = comp_count;
-  }
+    let rock = "rock_choice";
+    let scissors = "scissors_choice";
+    let paper = "paper_choice";
+
+    let result = playerChoiceID + comp;
+    let playerVictory = false;
+
+    if (result === rock + scissors) {
+        playerVictory = true;
+    } else if (result === scissors + paper) {
+        playerVictory = true;
+    } else if (result === paper + rock) {
+        playerVictory = true;
+    }
+
+    if (playerChoiceID === comp) {
+        message.innerHTML = "Its a draw!";
+    } else if (playerVictory) {
+        message.innerHTML = "You win!";
+        user_count += 1;
+        user_score.innerHTML = user_count;
+    } else if (playerVictory === false) {
+        message.innerHTML = "You lose!";
+        comp_count += 1;
+        comp_score.innerHTML = comp_count;
+    }
 }
 
 // Win function
